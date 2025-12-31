@@ -6,7 +6,7 @@
 
 ### Why this project exists
 
-We didn’t start this project to compete with YouTube.  
+This project was created to explore alternative, open, and transparent ways to index and discover video content in a federated ecosystem.
 We didn’t start it because we have funding, a large team, or a marketing plan.  
 
 We started it because we saw something quietly breaking.
