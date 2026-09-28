@@ -1,457 +1,215 @@
 Creator Hosting & Infrastructure Model
 
-Purpose
-
-The Open Video Discovery for PeerTube project is a discovery layer, not a video hosting company.
-
-However, a federated video ecosystem needs more than software and protocols. Creators also need somewhere to host their channels and videos.
-
-Not every creator has the technical knowledge, server hardware, bandwidth, storage, or reliable internet connection required to operate a PeerTube instance.
-
-For this reason, the project recognizes two complementary models:
-
-1. Creator-operated hosting
-2. Independent hosting providers
-
-Both models can exist within the same ecosystem.
-
-The purpose of this model is to make hosting a choice rather than a barrier.
-
----
-
-1. Creator-Operated Hosting
-
-A creator or organization may operate their own PeerTube instance.
-
-In this model:
-
-- The creator controls the server.
-- The creator controls their PeerTube instance.
-- The creator manages their storage and bandwidth.
-- The creator determines their own content policies.
-- The creator remains responsible for their content.
-- The creator can participate in federation according to their own configuration.
-
-The Open Video Discovery platform simply indexes and exposes discoverable information about the content.
-
-The discovery platform does not become the owner or host of the videos.
-
----
-
-2. Independent Hosting Providers
-
-Creators who do not want to operate their own infrastructure may use an independent hosting provider.
-
-A hosting provider may operate one or more PeerTube instances and host channels for multiple creators.
-
-The provider may offer services such as:
-
-- Server infrastructure
-- Storage
-- Bandwidth
-- Backups
-- Maintenance
-- Software updates
-- Monitoring
-- Technical support
-- Instance administration
-- Optional analytics or other infrastructure services
-
-The provider may serve one creator, a small group of creators, or a large network of channels.
-
-This creates an infrastructure layer between creators and the underlying server hardware without requiring the central discovery platform to become that infrastructure provider.
-
----
-
-3. Different Hosting Providers, Different Capabilities
-
-Not every hosting provider needs to have the same infrastructure.
-
-A small provider may operate a modest server with limited bandwidth.
-
-A larger provider may operate:
-
-- Multiple servers
-- High-bandwidth connections
-- Distributed infrastructure
-- Large storage capacity
-- Regional infrastructure
-- Professional monitoring and support
-
-The ecosystem should not assume that every PeerTube instance has identical technical capabilities.
-
-Peer-to-peer technologies such as WebTorrent may be useful in some environments, while a provider with sufficient bandwidth may be able to serve videos directly.
-
-The discovery platform does not require one specific infrastructure model.
-
-Its role is to make content discoverable regardless of which compatible hosting model is used.
-
----
-
 4. Hosting as a Service
 
 Hosting providers may offer different economic models.
 
 4.1 Paid Hosting
 
-A creator pays a hosting provider for infrastructure.
+A creator may pay a hosting provider for the infrastructure required to operate their channel.
 
-For example, the provider may charge according to:
+The creator may independently manage:
 
+- Advertising
+- Sponsorships
+- Advertiser relationships
+- Commercial agreements
+- Revenue collection
+
+The hosting provider is compensated for providing infrastructure and related services.
+
+The commercial relationship between the creator and advertisers remains independent from the hosting provider unless the creator chooses otherwise.
+
+---
+
+4.2 Sponsored & Revenue-Share Hosting
+
+A hosting provider may offer free or subsidized hosting to selected creators.
+
+In this model, the hosting provider assumes some or all of the infrastructure costs, which may include:
+
+- Servers
 - Storage
 - Bandwidth
-- Number of channels
-- Number of videos
-- Server capacity
-- Support level
-- Other agreed services
+- Maintenance
+- Backups
+- Technical support
+- Other operational costs
 
-The creator remains free to establish advertising and sponsorship relationships independently.
+In return, the creator and hosting provider may agree that the hosting provider will manage the commercial side of the creator's channel.
 
-The hosting provider is paid for infrastructure and services rather than becoming the advertising intermediary.
+This may include:
 
----
+- Finding advertisers
+- Building advertiser relationships
+- Negotiating advertising agreements
+- Managing sponsorships
+- Coordinating campaigns
+- Managing commercial placements
+- Collecting advertising or sponsorship revenue
+- Handling the administrative side of commercial relationships
 
-4.2 Sponsored or Subsidized Hosting
+The creator and hosting provider should agree in advance on how revenue is divided and what commercial rights and responsibilities each party has.
 
-A hosting provider may choose to support creators without charging them the full cost of hosting.
+For example, an agreement may define:
 
-This could be used for creators whose content is considered valuable but who cannot afford professional hosting.
+Advertising / Sponsorship Revenue
+                │
+                ▼
+       Hosting / Creator Agreement
+                │
+        ┌───────┴───────┐
+        ▼               ▼
+    Creator          Host / Network
+     Share               Share
 
-The provider may cover part or all of the infrastructure cost.
+The exact revenue-sharing arrangement is not defined by Open Video Discovery.
 
-Possible arrangements could include:
-
-- Free hosting
-- Subsidized hosting
-- Grants
-- Community-supported hosting
-- Sponsorship-based hosting
-
-Where appropriate, a provider and creator may agree that the provider receives an agreed share of advertising or sponsorship revenue.
-
-Such an agreement remains between the creator and the hosting provider.
-
-The central discovery platform does not collect the money, negotiate the contract, or take a commission.
-
----
-
-5. Hosting Is Separate From Discovery
-
-The architecture intentionally separates three different functions:
-
-Content Creation
-
-Creators produce and control their content.
-
-Infrastructure
-
-Creators or independent hosting providers operate the infrastructure required to store and deliver the content.
-
-Discovery
-
-Open Video Discovery for PeerTube helps audiences find that content.
-
-These functions do not need to belong to the same organization.
-
-A creator could therefore:
-
-- Produce content independently
-- Use a third-party hosting provider
-- Be discovered through Open Video Discovery
-- Establish advertising relationships directly with advertisers
-
-This separation is a fundamental part of the project.
+It is a private agreement between the creator and the hosting provider or creator network.
 
 ---
 
-6. Hosting Providers Are Independent Participants
+4.3 Hosting Provider as a Commercial Partner
 
-The project does not intend to create a single official hosting company.
+A hosting provider may therefore provide more than infrastructure.
 
-Different providers should be able to compete or cooperate according to their own models.
+Depending on its business model, it may operate as a combination of:
 
-They may differ in:
+- Infrastructure provider
+- Creator network
+- Advertising representative
+- Sponsorship manager
+- Technical service provider
 
-- Price
-- Storage
-- Bandwidth
-- Geographic location
-- Reliability
-- Support
-- Privacy policies
-- Technical capabilities
-- Content policies
-- Federation policies
-- Additional services
+This can be particularly useful for creators who have valuable content but do not want to manage the commercial side of their work.
 
-This creates room for different types of providers.
+The creator can focus primarily on creating content while the hosting provider manages infrastructure and, where agreed, commercial relationships.
 
-A small community server and a professional infrastructure company can both participate in the broader ecosystem.
+The two functions remain conceptually separate even when the same organization provides both.
 
 ---
 
-7. Creator Portability
+4.4 Transparency of the Hosting Agreement
 
-Hosting should not become another form of platform lock-in.
+Because sponsored hosting may involve revenue sharing, the relationship between the creator and hosting provider should be clearly defined.
 
-Where technically and legally possible, creators should be able to move their channels or content between compatible hosting providers.
+Creators should be able to understand:
 
-The project therefore favors:
+- What infrastructure is being provided
+- What costs are covered
+- Whether hosting is free or subsidized
+- Whether the provider manages advertising
+- Whether the provider manages sponsorships
+- How revenue is calculated
+- What percentage or amount goes to each party
+- Who owns the creator's content
+- Who controls the channel
+- What happens if the agreement ends
+- Whether the creator can migrate their content to another provider
 
-- Open standards
-- Portable data
-- Transparent hosting terms
-- Clear ownership arrangements
-- Export capabilities
-- Interoperable infrastructure
+The Open Video Discovery project does not define these commercial contracts.
 
-A creator should not have to lose their identity or entire catalog simply because they decide to change hosting providers.
-
-The exact technical mechanisms for portability may evolve with the PeerTube ecosystem and community contributions.
-
----
-
-8. Hosting Networks and Creator Organizations
-
-A hosting provider does not necessarily need to work with creators individually.
-
-Organizations may emerge that combine several functions.
-
-For example, a creator network or media organization could provide:
-
-- Hosting
-- Production support
-- Advertising relationships
-- Sponsorship management
-- Technical assistance
-- Multiple creator channels
-- Shared infrastructure
-
-Such organizations may become important as the ecosystem grows.
-
-The Open Video Discovery platform should remain compatible with these organizations without becoming one itself.
-
-A creator network may therefore operate independently while its channels remain discoverable through the central discovery layer.
+Its role is to encourage an ecosystem where such relationships can exist transparently.
 
 ---
 
-9. Relationship With Advertising & Sponsorship
+4.5 Creator Networks
 
-This model is designed to work alongside the project's Advertising & Sponsorship Policy.
+The same model can be extended beyond individual hosting providers.
 
-The roles remain separate:
+A creator network or media organization may provide:
 
-Creator ↔ Advertiser
+                    Creator
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+       Hosting     Advertising   Sponsorship
+          │            │            │
+          └────────────┼────────────┘
+                       ▼
+                Network / Provider
 
-The creator may establish direct sponsorship or advertising relationships with advertisers.
+Such an organization could host multiple creators and manage their commercial relationships collectively.
 
-Creator ↔ Hosting Provider
+For example, the organization might:
 
-The creator may separately pay for hosting or agree to another hosting arrangement.
+- Host dozens or hundreds of channels
+- Provide technical infrastructure
+- Sell advertising packages
+- Negotiate sponsorships
+- Manage advertiser relationships
+- Share revenue with creators
+- Provide production or technical services
 
-Advertiser ↔ Hosting Provider
+This is an independent business or organizational model.
 
-In some cases, a hosting provider or creator organization may participate in advertising operations according to its own agreement with creators.
-
-Discovery Platform
-
-The discovery platform provides visibility and discovery.
-
-It does not automatically become a party to these commercial relationships.
-
-The platform does not:
-
-- Collect advertising payments
-- Process sponsorship payments
-- Take a percentage of creator revenue
-- Set advertising prices
-- Require creators to use a particular hosting provider
-- Require creators to use a particular advertiser
-- Rank creators according to advertising revenue
-
-This preserves the separation established by the Advertising & Sponsorship Policy.
+Open Video Discovery does not become the network and does not take a percentage of those transactions.
 
 ---
 
-10. No Official Hosting Monopoly
+4.6 Separation From the Discovery Platform
 
-The project should avoid creating a situation where creators must use one official hosting provider to participate.
+Even when a hosting provider manages advertising and sponsorships, the Open Video Discovery platform remains separate.
 
-The discovery layer should remain compatible with a broader ecosystem of independent infrastructure providers.
+The discovery platform:
 
-The objective is:
+- Does not sell advertising
+- Does not negotiate sponsorships
+- Does not collect advertising revenue
+- Does not determine creator revenue shares
+- Does not require creators to use a particular hosting provider
+- Does not require creators to use a particular advertising network
 
-«Centralized discovery, distributed infrastructure, independent creators.»
+Its role remains discovery and organization of publicly discoverable PeerTube content.
 
-The discovery interface may be centralized because audiences benefit from having one recognizable place to search.
-
-The infrastructure underneath it does not need to be centralized.
-
----
-
-11. A Possible Ecosystem
-
-The ecosystem can be understood as several independent layers:
-
-                    ┌───────────────────────┐
-                    │       AUDIENCE        │
-                    └───────────┬───────────┘
-                                │
-                                ▼
-              ┌─────────────────────────────────┐
-              │   OPEN VIDEO DISCOVERY          │
-              │                                 │
-              │ Search • Discovery • Directory  │
-              │ Categories • Channels • Links   │
-              └───────────────┬─────────────────┘
-                              │
-                              ▼
-                     ┌────────────────┐
-                     │    PEERTUBE    │
-                     │    NETWORK     │
-                     └───────┬────────┘
-                             │
-              ┌──────────────┴──────────────┐
-              │                             │
-              ▼                             ▼
-     ┌─────────────────┐          ┌────────────────────┐
-     │ Creator-Hosted  │          │ Hosting Providers  │
-     │    Instance     │          │                    │
-     └────────┬────────┘          │ Small / Large /    │
-              │                   │ Specialized        │
-              │                   └─────────┬──────────┘
-              │                             │
-              ▼                             ▼
-       ┌─────────────┐              ┌────────────────┐
-       │   Creator   │              │    Creators    │
-       └─────────────┘              │    Channels    │
-                                    └────────────────┘
-
-
-       Advertising & Sponsorship
-       ─────────────────────────
-
-       Creator  ◄──────────────►  Advertiser
-          │
-          │
-          ▼
-    Hosting Provider
-    (where applicable)
-
-The important point is that these are separate roles, even when one organization happens to perform several of them.
+The commercial relationship can therefore exist at the infrastructure or creator-network level without turning the discovery platform into an advertising intermediary.
 
 ---
 
-12. What This Model Solves
+4.7 Two Valid Paths for Creators
 
-This model addresses a practical problem in decentralized video.
+This creates two fundamentally different paths:
 
-Decentralization does not automatically mean that every creator can afford or operate infrastructure.
+Creator-Controlled Commercial Model
 
-A creator may have:
+Creator
+   │
+   ├── chooses hosting
+   ├── manages advertising
+   ├── manages sponsorships
+   └── keeps negotiated commercial revenue
 
-- Valuable content
-- An audience
-- Limited technical knowledge
-- Limited bandwidth
-- No server
-- Limited financial resources
+Provider-Managed Commercial Model
 
-The ecosystem should not exclude that creator simply because they cannot self-host.
+Creator
+   │
+   ▼
+Hosting / Creator Network
+   │
+   ├── provides hosting
+   ├── finds advertisers
+   ├── manages sponsorships
+   ├── negotiates campaigns
+   └── shares revenue with creator
 
-A hosting provider can supply the missing infrastructure while the creator remains part of the wider open ecosystem.
+Neither model is required by Open Video Discovery.
 
-At the same time, creators who have the technical ability and resources remain free to operate their own infrastructure.
-
----
-
-13. What This Project Does Not Promise
-
-This model does not promise that:
-
-- Hosting will always be free
-- Every provider will have the same capabilities
-- Every provider will accept every creator
-- Every provider will have unlimited bandwidth
-- Every provider will offer the same content policies
-- P2P will always be required
-- One hosting model will work for everyone
-
-Infrastructure has real costs.
-
-Storage, bandwidth, servers, maintenance, electricity, connectivity, backups, and technical support must be provided by someone.
-
-The purpose of this model is not to hide those costs.
-
-It is to create multiple ways of providing the infrastructure.
+The creator chooses, or agrees to, the arrangement offered by the hosting provider.
 
 ---
 
-14. Long-Term Direction
+4.8 Guiding Principle
 
-As the ecosystem grows, different infrastructure models may emerge naturally.
+The project supports multiple economic relationships without making any one of them a requirement.
 
-Possible participants include:
+A creator may:
 
-- Individual creators
-- Community-run instances
-- Non-profit organizations
-- Commercial hosting providers
-- Creator networks
-- Media organizations
-- Educational institutions
-- Regional infrastructure providers
-- Large-scale hosting networks
+- Pay for hosting and manage their own advertising.
+- Pay for hosting while voluntarily using commercial services provided by the host.
+- Receive free or subsidized hosting in exchange for an agreed revenue share.
+- Join a creator network that provides infrastructure and commercial management.
+- Operate their own PeerTube infrastructure and manage everything independently.
 
-The project should remain open to these possibilities without requiring one of them to become the dominant model.
+The central discovery platform remains outside these commercial arrangements.
 
-The central principle remains:
-
-«Creators should have choices about where their content lives and how their infrastructure is provided.»
-
-And:
-
-«Discovery should not require ownership or control of the infrastructure.»
-
----
-
-15. Relationship to the Project Manifesto
-
-This model extends the project's central principle:
-
-«Centralized discovery, not centralized control.»
-
-The discovery layer can provide a simple and recognizable place for audiences to find content while the underlying infrastructure remains distributed among creators and independent providers.
-
-The project does not need to own every server.
-
-It does not need to host every video.
-
-It does not need to employ every creator.
-
-It does not need to control advertising.
-
-Its role is to connect the pieces.
-
----
-
-16. Guiding Principle
-
-The long-term goal is not to replace one centralized platform with another centralized platform.
-
-It is to separate functions that do not need to be controlled by the same organization:
-
-Creation → Hosting → Discovery → Advertising
-
-Each can have independent participants.
-
-Creators can choose how they create and where they host.
-
-Hosting providers can compete on infrastructure and services.
-
-Advertisers can establish direct relationships with suitable creators.
-
-Audiences can use a common discovery layer to find content across the ecosystem.
-
-The project exists to connect these layers without needing to own them.
+Its purpose is to make the resulting content easier to discover, regardless of which legitimate hosting or commercial model supports the creator.
