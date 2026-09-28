@@ -57,9 +57,7 @@ It simply:
 > Collects information about videos, organizes it, and makes it discoverable
 
 Videos remain:  
-- On the creator’s server  
-- Under the creator’s full control  
-- With their own terms
+Creator-controlled content, hosted either directly by the creator or by an independent hosting provider chosen by the creator.
 
 We only collect metadata:  
 - Title  
